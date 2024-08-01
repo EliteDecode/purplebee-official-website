@@ -20,10 +20,14 @@ module.exports = {
       fontFamily: {
         dmsans: ["DM Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
+        raleway: ["Raleway"],
+        oswald: ["Oswald"],
+        calistoga: ["Calistoga"],
       },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
+        tetiary: "#f7f7f7",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -61,6 +65,11 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      animationMagic: {
+        marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+      },
+
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -69,6 +78,17 @@ module.exports = {
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
+        },
+        "shine-pulse": {
+          "0%": {
+            "background-position": "0% 0%",
+          },
+          "50%": {
+            "background-position": "100% 100%",
+          },
+          to: {
+            "background-position": "0% 0%",
+          },
         },
       },
       animation: {

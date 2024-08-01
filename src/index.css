@@ -66,3 +66,80 @@
   margin: 0%;
   box-sizing: border-box;
 }
+
+.custom-c {
+  width: 85%;
+  margin: auto;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .custom-c {
+    width: 95%;
+  }
+}
+
+.hero_bg {
+  background: url("./assets/images/hero/hero_bg2.jpg");
+  background-color: rgba(0, 0, 0, 0.7);
+  background-position: 0px -100px;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  .hero_bg {
+    background: url("./assets/images/hero/hero_bg2.jpg");
+    background-color: rgba(0, 0, 0, 0.7);
+    background-position: 0px 0px;
+    background-size: cover;
+    background-blend-mode: overlay;
+  }
+}
+
+/* Center the carousel container */
+.swiper-container {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Style for each slide */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff; /* Background color for slides */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+/* Image styling */
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Inactive slides default styling */
+.swiper-slide {
+  transform: scale(0.8); /* Scale down the inactive slides */
+}
+
+/* Active slide is larger */
+.swiper-slide-active {
+  transform: scale(1.2); /* Scale up the active slide */
+}
+
+/* Pagination bullets styling */
+.swiper-pagination-bullet {
+  background: #7b61ff; /* Active bullet color */
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+  background: #5b42e2; /* Inactive bullet color */
+  opacity: 1;
+}

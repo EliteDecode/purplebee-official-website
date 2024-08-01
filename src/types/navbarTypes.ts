@@ -3,8 +3,10 @@ export type NavbarLinksProps = {
   description: string;
   image?: string;
   width?: string;
-  links?: {
-    title: string;
-    path: string;
-  }[];
+  links?: NavbarMiniLinksProps[];
+};
+
+export type NavbarMiniLinksProps = {
+  title: string;
+  path: string;
 };
