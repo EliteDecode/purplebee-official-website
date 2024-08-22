@@ -1,17 +1,12 @@
 import { Box, Grid } from "@mui/material";
 import TitleText from "../common/TitleText";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
+
 import industriesImage from "@/assets/images/navbar/navbar_industries.jpg";
 import trainingImage from "@/assets/images/navbar/navbar_training.jpg";
 import companyImage from "@/assets/images/navbar/navbar_company.jpg";
 
-import { Pagination, Autoplay } from "swiper/modules";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/autoplay";
+import { Autoplay } from "swiper/modules";
 
 // Install modules
 const LatestProjects = () => {

@@ -4,7 +4,7 @@ import { IoIosMenu } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
 import Logo from "../../assets/images/Logo.png";
 import useMobileNavbar from "@/hooks/useMobileNavbar";
-import { NavbarLinks } from "@/utils";
+import { NavbarLinks } from "@/utils/general.content.";
 import serviceImage from "@/assets/images/navbar/navbar_services.jpg";
 import trainingImage from "@/assets/images/navbar/navbar_training.jpg";
 import companyImage from "@/assets/images/navbar/navbar_company.jpg";

@@ -2,10 +2,29 @@ import { Box } from "@mui/material";
 import { cn } from "@/lib/utils";
 import Marquee from "react-fast-marquee";
 import TitleText from "../common/TitleText";
-import { AboutPatners } from "@/utils";
+import { AboutPatners } from "@/utils/general.content.";
 import { ServicesProps } from "@/types/commonTypes";
+import { useEffect, useState } from "react";
 
 const Patners = () => {
+  const [isGradientEnabled, setIsGradientEnabled] = useState<boolean>(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setIsGradientEnabled(false);
+      } else {
+        setIsGradientEnabled(true);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const PatnersCard = ({ icon, title, abbr, description }: ServicesProps) => {
     return (
       <figure
@@ -26,15 +45,17 @@ const Patners = () => {
           />
           <div className="flex flex-col">
             <figcaption
-              className="text-sm uppercase font-medium dark:text-white"
+              className="sm:text-sm text-md uppercase font-bold dark:text-white"
               style={{ fontFamily: "calistoga" }}>
               {title}
             </figcaption>
-            <p className="text-xs font-medium dark:text-white/40">{abbr}</p>
+            <p className="sm:text-xs text-sm font-medium dark:text-white/40">
+              {abbr}
+            </p>
           </div>
         </div>
         <blockquote
-          className="mt-2 text-[11px]"
+          className="mt-2 sm:text-[11px] text-[13px]"
           style={{ fontFamily: "calistoga" }}>
           {description}
         </blockquote>
@@ -48,7 +69,7 @@ const Patners = () => {
         <TitleText title="Esteemed Patners" />
 
         <Box className="mt-5">
-          <Marquee className="gap-2" gradient={true}>
+          <Marquee className="gap-2" gradient={isGradientEnabled}>
             {AboutPatners?.map((patner, index) => (
               <PatnersCard key={index} {...patner} />
             ))}

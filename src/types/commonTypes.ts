@@ -1,5 +1,11 @@
 export type TextTitleProps = {
   title: string;
+  color?: string;
+  description?: string;
+};
+
+export type DescriptionTextProps = {
+  description: string;
 };
 
 export type ServicesProps = {

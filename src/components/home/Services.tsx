@@ -1,6 +1,6 @@
 import { Box, Grid } from "@mui/material";
 import TitleText from "../common/TitleText";
-import { ServicesRendered } from "@/utils";
+import { ServicesRendered } from "@/utils/general.content.";
 import { Typography } from "antd";
 
 const Services = () => {

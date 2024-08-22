@@ -11,7 +11,7 @@ import Logo from "../../assets/images/Logo.png";
 import { Box, Grid } from "@mui/material";
 import { Button } from "../ui/button";
 import { Typography } from "antd";
-import { MiniBarLinks, NavbarLinks } from "@/utils";
+import { MiniBarLinks, NavbarLinks } from "@/utils/general.content.";
 import { Link } from "react-router-dom";
 import { IoMdCheckmark } from "react-icons/io";
 import { IoIosPhonePortrait } from "react-icons/io";
@@ -34,7 +34,9 @@ const Navbar = () => {
           <Grid container>
             <Grid item xs={2} md={2}>
               <Box>
-                <img src={Logo} alt="Purplebee Logo" className="w-[50%]" />
+                <Link to="/">
+                  <img src={Logo} alt="Purplebee Logo" className="w-[70%]" />
+                </Link>
               </Box>
             </Grid>
             <Grid item xs={8} md={8}>
@@ -45,7 +47,7 @@ const Navbar = () => {
                       <NavigationMenuItem key={index}>
                         {item?.links ? (
                           <>
-                            <NavigationMenuTrigger>
+                            <NavigationMenuTrigger className="text-[17px]">
                               {item?.title}
                             </NavigationMenuTrigger>
                             <NavigationMenuContent className="border-none">
@@ -78,14 +80,14 @@ const Navbar = () => {
                                               : "grid-cols-1"
                                         } gap-2 `}>
                                         {item?.links?.map((link, index) => (
-                                          <li
-                                            className="text-sm p-2 flex items-center space-x-1 bg-gray-50 shadow-sm cursor-pointer hover:shadow-sm rounded-md "
-                                            key={index}>
-                                            <IoMdCheckmark size={14} />{" "}
-                                            <span className="text-[10px]">
-                                              {link?.title}
-                                            </span>
-                                          </li>
+                                          <a href={link?.path} key={index}>
+                                            <li className="text-sm p-2 flex items-center space-x-1 bg-gray-50 shadow-sm cursor-pointer hover:shadow-sm rounded-md ">
+                                              <IoMdCheckmark size={14} />{" "}
+                                              <span className="text-[10px]">
+                                                {link?.title}
+                                              </span>
+                                            </li>
+                                          </a>
                                         ))}
                                       </ul>
                                     </Box>
@@ -123,7 +125,7 @@ const Navbar = () => {
                 </Button>
                 <Button
                   size="sm"
-                  className="bg-secondary flex items-center space-x-1">
+                  className="bg-secondary text-dark flex items-center space-x-1">
                   <IoIosPhonePortrait size={15} /> <span>Get a Quote</span>
                 </Button>
               </Box>

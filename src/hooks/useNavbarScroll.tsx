@@ -11,10 +11,6 @@ const useNavbarScroll = (): UseNavbarScrollResult => {
   const [scrollY, setScrollY] = useState<number>(0);
   const [prevScrollY, setPrevScrollY] = useState<number>(0);
 
-  /**
-   * The function `handleScroll` in TypeScript React updates the scroll position and adjusts the
-   * visibility of different elements based on the scroll behavior.
-   */
   const handleScroll = (): void => {
     const currentScrollY = window.scrollY;
     setScrollY(currentScrollY);

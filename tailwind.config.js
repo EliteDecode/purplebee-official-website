@@ -28,6 +28,7 @@ module.exports = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         tetiary: "#f7f7f7",
+        dark: "#0d030f",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
