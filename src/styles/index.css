@@ -80,7 +80,7 @@
 
 .hero_bg {
   background: url("../assets/images/hero/pb2.jpg");
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
   background-position: 0px -100px;
   background-size: cover;
   background-blend-mode: overlay;

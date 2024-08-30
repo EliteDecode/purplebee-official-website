@@ -5,7 +5,7 @@ import ContactForm from "@/components/forms/ContactForm";
 
 const Contact = () => {
   return (
-    <Box className="bg-tetiary">
+    <Box className="bg-tetiary" id="contact">
       <Box className="custom-c py-16">
         <Grid container spacing={4}>
           <Grid item sm={12} md={6}>

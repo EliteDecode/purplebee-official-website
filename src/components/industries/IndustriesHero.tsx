@@ -1,10 +1,9 @@
+import { IndustriesHeroProps } from "@/types/majorTypes";
 import { Box } from "@mui/material";
 import { Typography } from "antd";
 import { motion } from "framer-motion";
-import { Button } from "../ui/button";
 import { IoIosPhonePortrait } from "react-icons/io";
-import { FiMail } from "react-icons/fi";
-import { IndustriesHeroProps } from "@/types/majorTypes";
+import { Button } from "../ui/button";
 
 const transition = {
   type: "spring",
@@ -15,13 +14,13 @@ const transition = {
 const IndustriesHero = ({ data }: IndustriesHeroProps) => {
   return (
     <div
-      className="sm:h-[85vh] h-[80vh] w-full flex flex-col"
+      className="sm:h-[85vh] h-[70vh] w-full flex flex-col"
       style={{
         backgroundImage: `url(${data.background})`,
         backgroundSize: "cover",
         backgroundPosition: "0px 30px",
         backgroundRepeat: "no-repeat",
-        backgroundColor: "rgba(0, 0, 0, 0.7)",
+        backgroundColor: "rgba(0, 0, 0, 0.5)",
         backgroundBlendMode: "overlay",
       }}>
       <Box className="w-[85%] m-auto">

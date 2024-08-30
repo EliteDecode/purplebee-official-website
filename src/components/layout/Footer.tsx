@@ -1,11 +1,10 @@
 import { NavbarLinks, projects } from "@/utils/general.content.";
 import { Box } from "@mui/material";
 import { Typography } from "antd";
-import React from "react";
 import {
-  FaLinkedin,
   FaFacebookSquare,
   FaInstagramSquare,
+  FaLinkedin,
   FaTwitterSquare,
 } from "react-icons/fa";
 

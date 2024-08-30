@@ -1,60 +1,81 @@
-import { Box, Grid } from "@mui/material";
-import TitleText from "../common/TitleText";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { LatestEvents } from "@/utils/general.content.";
+import { Box } from "@mui/material";
+import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { SwiperNavButtons } from "../common/SwiperNavButtons";
+import TitleText from "../common/TitleText";
+import { Button } from "../ui/button";
 
-import industriesImage from "@/assets/images/navbar/navbar_industries.jpg";
-import trainingImage from "@/assets/images/navbar/navbar_training.jpg";
-import companyImage from "@/assets/images/navbar/navbar_company.jpg";
-
-import { Autoplay } from "swiper/modules";
-
-// Install modules
 const LatestProjects = () => {
   return (
-    <Box className="bg-white py-16 sm:block hidden">
-      <Box className="custom-c p-5 relative rounded-md">
-        <TitleText title="Latest Projects" />
-        <Grid container className="mt-8 sm:block hidden">
-          <Grid item md={12}></Grid>
-          <Grid item md={12}>
+    <Box className="bg-tetiary">
+      <Box className="py-16">
+        <Box className="custom-c p-5 relative rounded-md">
+          <TitleText
+            title="Latest Events"
+            description="Purplebee Tech regularly provides great opportunities to learn something new by interviewing the students and opinion leaders from various scientific and business domains."
+          />
+          <Box className="mt-16 relative">
             <Swiper
-              modules={[Autoplay]}
+              modules={[Autoplay, Navigation]}
               pagination={{ clickable: true }}
               autoplay={{ delay: 3000 }}
               slidesPerView={2}
               spaceBetween={30}
               loop={true}>
-              <SwiperSlide>
-                <img src={industriesImage} alt="Image 1" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={trainingImage} alt="Image 2" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={companyImage} alt="Image 3" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={industriesImage} alt="Image 1" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={trainingImage} alt="Image 2" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={companyImage} alt="Image 3" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={industriesImage} alt="Image 1" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={trainingImage} alt="Image 2" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={companyImage} alt="Image 3" />
-              </SwiperSlide>
-              {/* Add more slides as needed */}
+              {LatestEvents?.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <Box>
+                    <Box className="relative">
+                      <img
+                        src={item?.cover}
+                        alt={item?.title}
+                        className="h-[40vh] w-full object-cover object-center"
+                      />
+                      <Box className="p-3 z-10">
+                        <Dialog>
+                          <DialogTrigger className="" asChild>
+                            <Button
+                              className="play-btn-transition"
+                              variant="default">
+                              About Event
+                            </Button>
+                          </DialogTrigger>
+                          <DialogContent className="bg-[#2f1435] border-none sm:max-w-[70%]">
+                            <DialogHeader>
+                              <DialogTitle className="text-white">
+                                {item?.title}
+                              </DialogTitle>
+                              <DialogDescription className="text-gray-400 font-normal">
+                                {item?.description}
+                              </DialogDescription>
+                            </DialogHeader>
+                            <Box className="my-5">
+                              <img
+                                src={item?.cover}
+                                alt={item?.title}
+                                className="h-[40vh] w-full object-cover object-center"
+                              />
+                            </Box>
+                          </DialogContent>
+                        </Dialog>
+                      </Box>
+                    </Box>
+                  </Box>
+                </SwiperSlide>
+              ))}
+              <SwiperNavButtons />
             </Swiper>
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
       </Box>
     </Box>
   );

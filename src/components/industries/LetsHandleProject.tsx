@@ -18,7 +18,7 @@ const LetsHandleProject = () => {
             project
           </Typography>
         </Box>
-        <Grid container className="mt-16">
+        <Grid container className="mt-10">
           <Grid item sm={2}></Grid>
           <Grid item sm={8}>
             <Box className="flex w-full  items-center relative justify-center">

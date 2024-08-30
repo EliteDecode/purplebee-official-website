@@ -97,3 +97,10 @@ export type IndustryProjectsProps = {
     }[];
   };
 };
+
+//Company Achievements
+export type CompanyAchievementsProps = {
+  title: string;
+  desc: string;
+  icon: string;
+};

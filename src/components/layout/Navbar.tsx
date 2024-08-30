@@ -2,22 +2,21 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
+  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-  NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
-import Logo from "../../assets/images/Logo.png";
-import { Box, Grid } from "@mui/material";
-import { Button } from "../ui/button";
-import { Typography } from "antd";
-import { MiniBarLinks, NavbarLinks } from "@/utils/general.content.";
-import { Link } from "react-router-dom";
-import { IoMdCheckmark } from "react-icons/io";
-import { IoIosPhonePortrait } from "react-icons/io";
-import { FiMail } from "react-icons/fi";
 import useNavbarScroll from "@/hooks/useNavbarScroll";
-
+import { NavbarLinks } from "@/utils/general.content.";
+import { Box, Grid } from "@mui/material";
+import { Typography } from "antd";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import { FiMail } from "react-icons/fi";
+import { IoIosPhonePortrait, IoMdCheckmark } from "react-icons/io";
+import { Link } from "react-router-dom";
+import Logo from "../../assets/images/Logo.png";
+import { Button } from "../ui/button";
 import Mobile from "./Mobile";
 
 const Navbar = () => {
@@ -102,9 +101,10 @@ const Navbar = () => {
                           </>
                         ) : (
                           <>
-                            <Link to={item?.title}>
+                            <Link to={item?.title} className="text-[17px]">
                               <NavigationMenuLink
-                                className={navigationMenuTriggerStyle()}>
+                                className={navigationMenuTriggerStyle()}
+                                style={{ fontSize: "17px" }}>
                                 {item?.title}
                               </NavigationMenuLink>
                             </Link>
@@ -118,16 +118,20 @@ const Navbar = () => {
             </Grid>
             <Grid item xs={2} md={2}>
               <Box className="flex items-center space-x-1">
-                <Button
-                  size="sm"
-                  className="bg-primary flex items-center space-x-1">
-                  <FiMail size={15} /> <span>Contact Us</span>
-                </Button>
-                <Button
-                  size="sm"
-                  className="bg-secondary text-dark flex items-center space-x-1">
-                  <IoIosPhonePortrait size={15} /> <span>Get a Quote</span>
-                </Button>
+                <AnchorLink href="#contact">
+                  <Button
+                    size="sm"
+                    className="bg-primary flex items-center space-x-1">
+                    <FiMail size={15} /> <span>Contact Us</span>
+                  </Button>
+                </AnchorLink>
+                <AnchorLink href="#contact">
+                  <Button
+                    size="sm"
+                    className="bg-secondary text-dark flex items-center space-x-1">
+                    <IoIosPhonePortrait size={15} /> <span>Get a Quote</span>
+                  </Button>
+                </AnchorLink>
               </Box>
             </Grid>
           </Grid>
@@ -142,7 +146,7 @@ const Navbar = () => {
         className={`container p-3 flex justify-between bg-primary transition-all duration-300 ${
           hideMainBar ? "fixed top-0 left-0 right-0 z-10" : ""
         } ${showMiniBar ? "block" : "hidden"}`}>
-        <Box className="flex flex-wrap items-center space-x-4">
+        {/* <Box className="flex flex-wrap items-center space-x-4">
           {MiniBarLinks?.map((item, index) => (
             <Typography
               className="text-white text-[13px] cursor-pointer"
@@ -150,11 +154,13 @@ const Navbar = () => {
               {item?.title}
             </Typography>
           ))}
-        </Box>
+        </Box> */}
 
         <Box className="flex justify-end items-center">
-          <IoIosPhonePortrait size={20} className="text-white mr-2" />
-          <Typography className="text-white">Book a Call</Typography>
+          <a href="tel:+2349060606527" className="flex items-center">
+            <IoIosPhonePortrait size={20} className="text-white mr-2" />
+            <Typography className="text-white">Book a Call</Typography>
+          </a>
         </Box>
       </Box>
     </>

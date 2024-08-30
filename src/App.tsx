@@ -12,6 +12,19 @@ import {
   Agriculture,
   Healthcare,
   Technology,
+  Careers,
+  SoftwareDevelopment,
+  TechnicalTraining,
+  TechnicalConsultation,
+  ProjectManagement,
+  ConduciveWorkspace,
+  DigitalMarketing,
+  Frontend,
+  Backend,
+  DataAnalytics,
+  UIUX,
+  Animation,
+  BasicComputerKnowledge,
 } from "./routes";
 import { Layout } from "./components/layout";
 
@@ -26,6 +39,7 @@ import "swiper/css/mousewheel";
 
 //Custom Styles
 import "@/styles/index.css";
+import Graphics from "./pages/Training/Graphics";
 
 export default function App() {
   return (
@@ -43,25 +57,125 @@ export default function App() {
               path: "/home",
               element: <Home />,
             },
+
+            //Industry Based Routes Here
             {
-              path: "/industry/*",
-              element: <Education />,
+              path: "/industry",
+              children: [
+                {
+                  path: "",
+                  element: <Education />,
+                },
+                {
+                  path: "education",
+                  element: <Education />,
+                },
+                {
+                  path: "healthcare",
+                  element: <Healthcare />,
+                },
+                {
+                  path: "agriculture",
+                  element: <Agriculture />,
+                },
+                {
+                  path: "technology",
+                  element: <Technology />,
+                },
+              ],
             },
+
+            //Comapny Bases Routes Here
             {
-              path: "/industry/education",
-              element: <Education />,
+              path: "/company",
+              children: [
+                {
+                  path: "",
+                  element: <About />,
+                },
+                {
+                  path: "about",
+                  element: <About />,
+                },
+                {
+                  path: "careers",
+                  element: <Careers />,
+                },
+              ],
             },
+
+            // Services Routes
             {
-              path: "/industry/healthcare",
-              element: <Healthcare />,
+              path: "/services",
+              children: [
+                {
+                  path: "",
+                  element: <SoftwareDevelopment />,
+                },
+                {
+                  path: "software-development",
+                  element: <SoftwareDevelopment />,
+                },
+                {
+                  path: "technical-training",
+                  element: <TechnicalTraining />,
+                },
+                {
+                  path: "technical-consultation",
+                  element: <TechnicalConsultation />,
+                },
+                {
+                  path: "project-management",
+                  element: <ProjectManagement />,
+                },
+                {
+                  path: "conducive-workspace",
+                  element: <ConduciveWorkspace />,
+                },
+                {
+                  path: "digital-marketing",
+                  element: <DigitalMarketing />,
+                },
+              ],
             },
+
+            // Training Routes
             {
-              path: "/industry/agriculture",
-              element: <Agriculture />,
-            },
-            {
-              path: "/industry/technology",
-              element: <Technology />,
+              path: "/training",
+              children: [
+                {
+                  path: "",
+                  element: <Frontend />,
+                },
+                {
+                  path: "frontend-development",
+                  element: <Frontend />,
+                },
+                {
+                  path: "backend-development",
+                  element: <Backend />,
+                },
+                {
+                  path: "data-analytics",
+                  element: <DataAnalytics />,
+                },
+                {
+                  path: "uiux-design",
+                  element: <UIUX />,
+                },
+                {
+                  path: "animation",
+                  element: <Animation />,
+                },
+                {
+                  path: "graphics-design",
+                  element: <Graphics />,
+                },
+                {
+                  path: "basic-computer-knowledge",
+                  element: <BasicComputerKnowledge />,
+                },
+              ],
             },
           ],
         },

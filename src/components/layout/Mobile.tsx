@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import { IoIosMenu } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
-import Logo from "../../assets/images/Logo.png";
+import Logo from "@/assets/images/Logo.png";
 import useMobileNavbar from "@/hooks/useMobileNavbar";
 import { NavbarLinks } from "@/utils/general.content.";
 import serviceImage from "@/assets/images/navbar/navbar_services.jpg";

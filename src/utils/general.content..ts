@@ -1,42 +1,42 @@
+import { ServicesProps } from "@/types/commonTypes";
 import {
+  ExpertiseDetailProps,
   InterviewsProps,
   NavbarLinksProps,
   NavbarMiniLinksProps,
-  TestimonialsProps,
   TechnologySetProps,
-  ExpertiseDetailProps,
+  TestimonialsProps,
 } from "@/types/majorTypes";
-import { ServicesProps } from "@/types/commonTypes";
 
 //Navbar Icons
-import industriesImage from "@/assets/images/navbar/navbar_industries.jpg";
 import companyImage from "@/assets/images/navbar/navbar_company.jpg";
-import trainingImage from "@/assets/images/navbar/navbar_training.jpg";
+import industriesImage from "@/assets/images/navbar/navbar_industries.jpg";
 import servicesImage from "@/assets/images/navbar/navbar_services.jpg";
+import trainingImage from "@/assets/images/navbar/navbar_training.jpg";
 
 //Services Icons
-import softwareImage from "@/assets/images/services/software.png";
 import consultationImage from "@/assets/images/services/consultion.png";
-import techtrainingImage from "@/assets/images/services/training.png";
-import workspaceImage from "@/assets/images/services/workspace.png";
 import digitalMarketingImage from "@/assets/images/services/digital-marketting.png";
 import projectManagementImage from "@/assets/images/services/management.png";
+import softwareImage from "@/assets/images/services/software.png";
+import techtrainingImage from "@/assets/images/services/training.png";
+import workspaceImage from "@/assets/images/services/workspace.png";
 
 //Patners Icons
-import hustImage from "@/assets/images/patners/hust.png";
 import ekitiImage from "@/assets/images/patners/eklogo.png";
-import oesImage from "@/assets/images/patners/oes.png";
 import grace4impactImage from "@/assets/images/patners/grace4Impact.png";
+import hustImage from "@/assets/images/patners/hust.png";
+import oesImage from "@/assets/images/patners/oes.png";
 import pbresultImage from "@/assets/images/patners/pbresult.png";
 
 //Testimonial Images
-import testimonial1 from "@/assets/images/testimonials/testimonial-1.jpeg";
-import testimonial2 from "@/assets/images/testimonials/testimonial-2.jpg";
-import testimonial3 from "@/assets/images/testimonials/testimonial-3.jpeg";
-import testimonial4 from "@/assets/images/testimonials/testimonial-4.jpeg";
-import testimonial5 from "@/assets/images/testimonials/testimonial-5.jpeg";
-import testimonial6 from "@/assets/images/testimonials/testimonial-6.jpeg";
-import testimonial7 from "@/assets/images/testimonials/testimonial-7.jpeg";
+import ajayiTestimonials from "@/assets/images/testimonials/ajayi.jpg";
+import balogunTestimonial from "@/assets/images/testimonials/balogun.jpg";
+
+//Latest Events
+import mtt from "@/assets/images/events/3mtt.jpg";
+import kidsbootcamp from "@/assets/images/events/kidsbootcamp.png";
+import pbfoundation from "@/assets/images/events/pbfoundation.png";
 
 //Interview Covers
 import interview1 from "@/assets/images/testimonials/vid1.png";
@@ -44,47 +44,48 @@ import interview2 from "@/assets/images/testimonials/vid2.png";
 
 //Technology Set Icons
 import {
+  FaAngular,
+  FaAws,
+  FaCss3Alt,
+  FaFigma,
+  FaGoogle,
+  FaHtml5,
+  FaJava,
+  FaJsSquare,
+  FaLaravel,
+  FaMicrosoft,
+  FaNode,
+  FaPhp,
   FaReact,
   FaVuejs,
-  FaAngular,
-  FaNode,
-  FaFigma,
-  FaLaravel,
-  FaPhp,
-  FaAws,
-  FaHtml5,
   FaWordpress,
-  FaGoogle,
-  FaJava,
-  FaMicrosoft,
-  FaCss3Alt,
-  FaJsSquare,
 } from "react-icons/fa";
-import { SiFlutter, SiTypescript } from "react-icons/si";
 import {
-  SiNextdotjs,
-  SiExpress,
-  SiDjango,
-  SiFlask,
-  SiAdobexd,
-  SiSketch,
   SiAdobephotoshop,
-  SiSwift,
-  SiKotlin,
-  SiMongodb,
-  SiMysql,
-  SiPostgresql,
-  SiSqlite,
+  SiAdobexd,
+  SiDjango,
+  SiDrupal,
+  SiExpress,
+  SiFlask,
+  SiFlutter,
   SiHeroku,
   SiJoomla,
-  SiDrupal,
+  SiKotlin,
   SiMagento,
+  SiMongodb,
+  SiMysql,
+  SiNextdotjs,
+  SiPostgresql,
+  SiSketch,
+  SiSqlite,
+  SiSwift,
+  SiTypescript,
 } from "react-icons/si";
 
 //Expertise Images
+import ecommerceImage from "@/assets/images/expertise/ecommerce.jpg";
 import elearningImage from "@/assets/images/expertise/elearning.jpg";
 import healthcareImage from "@/assets/images/expertise/healthcare.jpg";
-import ecommerceImage from "@/assets/images/expertise/ecommerce.jpg";
 
 //======================================================================  Contents ========================================================================================//
 
@@ -96,7 +97,7 @@ export const NavbarLinks: NavbarLinksProps[] = [
     width: "w-[700px]",
     image: industriesImage,
     description:
-      " Lorem ipsum dolor sit amet consectetur adipisicing  elit. Totam, commodi?",
+      "We cut accross industries and provide customized solutions for each industry.",
     links: [
       {
         title: "Education",
@@ -121,128 +122,48 @@ export const NavbarLinks: NavbarLinksProps[] = [
     width: "w-[800px]",
     image: companyImage,
     description:
-      " Lorem ipsum dolor sit amet consectetur adipisicing  elit. Totam, commodi?",
+      "We offer a wide range of services to meet the diverse needs of our clients.",
     links: [
       {
-        title: "Sustainability",
-        path: "/sustainability",
+        title: "Software Development",
+        path: "/services/software-development",
       },
       {
-        title: "Innovation",
-        path: "/innovation",
+        title: "Technical Training",
+        path: "/services/technical-training",
       },
       {
-        title: "Technology",
-        path: "/technology",
+        title: "Project Management",
+        path: "/services/project-management",
       },
       {
-        title: "Education",
-        path: "/education",
+        title: "Conducive Workspace",
+        path: "/services/conducive-workspace",
       },
       {
-        title: "Environment",
-        path: "/environment",
+        title: "Technical Consultation",
+        path: "/services/technical-consultation",
       },
       {
-        title: "Healthcare",
-        path: "/healthcare",
-      },
-      {
-        title: "Agriculture",
-        path: "/agriculture",
-      },
-      {
-        title: "Manufacturing",
-        path: "/manufacturing",
-      },
-      {
-        title: "Construction",
-        path: "/construction",
-      },
-      {
-        title: "Energy",
-        path: "/energy",
-      },
-      {
-        title: "Transportation",
-        path: "/transportation",
-      },
-      {
-        title: "Real Estate",
-        path: "/real-estate",
+        title: "Digital Marketing",
+        path: "/services/digital-marketing",
       },
     ],
   },
   {
     title: "Company",
-    width: "w-[950px]",
+    width: "w-[700px]",
     image: trainingImage,
     description:
       " Lorem ipsum dolor sit amet consectetur adipisicing  elit. Totam, commodi?",
     links: [
       {
-        title: "Company",
-        path: "/company",
+        title: "About",
+        path: "/company/about",
       },
       {
         title: "Careers",
-        path: "/careers",
-      },
-      {
-        title: "News",
-        path: "/news",
-      },
-      {
-        title: "Contact Us",
-        path: "/contact-us",
-      },
-      {
-        title: "Healthcare",
-        path: "/healthcare",
-      },
-      {
-        title: "Agriculture",
-        path: "/agriculture",
-      },
-      {
-        title: "Manufacturing",
-        path: "/manufacturing",
-      },
-      {
-        title: "Construction",
-        path: "/construction",
-      },
-      {
-        title: "Company",
-        path: "/company",
-      },
-      {
-        title: "Careers",
-        path: "/careers",
-      },
-      {
-        title: "News",
-        path: "/news",
-      },
-      {
-        title: "Contact Us",
-        path: "/contact-us",
-      },
-      {
-        title: "Healthcare",
-        path: "/healthcare",
-      },
-      {
-        title: "Agriculture",
-        path: "/agriculture",
-      },
-      {
-        title: "Manufacturing",
-        path: "/manufacturing",
-      },
-      {
-        title: "Construction",
-        path: "/construction",
+        path: "/company/careers",
       },
     ],
   },
@@ -251,63 +172,37 @@ export const NavbarLinks: NavbarLinksProps[] = [
     width: "w-[800px]",
     image: servicesImage,
     description:
-      " Lorem ipsum dolor sit amet consectetur adipisicing  elit. Totam, commodi?",
+      "We provide training in various technologies and tools for our clients.",
     links: [
       {
-        title: "Blog",
-        path: "/blog",
+        title: "Frontend Development",
+        path: "/training/frontend-development",
       },
       {
-        title: "Events",
-        path: "/events",
+        title: "Backend Development",
+        path: "/training/backend-development",
       },
       {
-        title: "Support",
-        path: "/support",
+        title: "Data Analytics",
+        path: "/training/data-analytics",
       },
       {
-        title: "FAQ",
-        path: "/faq",
+        title: "UIUX Design",
+        path: "/training/uiux-design",
       },
       {
-        title: "Testimonials",
-        path: "/testimonials",
+        title: "Animation",
+        path: "/training/animation",
       },
       {
-        title: "Case Studies",
-        path: "/case-studies",
+        title: "Graphics Design",
+        path: "/training/graphics-design",
       },
       {
-        title: "Video",
-        path: "/video",
-      },
-      {
-        title: "Podcast",
-        path: "/podcast",
-      },
-      {
-        title: "Webinars",
-        path: "/webinars",
-      },
-      {
-        title: "White Papers",
-        path: "/white-papers",
-      },
-      {
-        title: "Ebooks",
-        path: "/ebooks",
-      },
-      {
-        title: "Open Source",
-        path: "/open-source",
+        title: "Basic Computer Knowledge",
+        path: "/training/basic-computer-knowledge",
       },
     ],
-  },
-
-  {
-    title: "Portolio",
-    description:
-      " Lorem ipsum dolor sit amet consectetur adipisicing  elit. Totam, commodi?",
   },
 ];
 
@@ -359,6 +254,29 @@ export const MiniBarLinks: NavbarMiniLinksProps[] = [
   {
     title: "Technologies",
     path: "/contact-us",
+  },
+];
+
+//LatestEvents
+
+export const LatestEvents = [
+  {
+    title: "3 Million Technical Talent (3MTT)",
+    description:
+      "The 3MTT. The 3 Million Technical Talent (3MTT) programme, a critical part of the Renewed Hope agenda, is aimed at building Nigerias technical talent backbone to power our digital economy and position Nigeria as a net talent exporter. Purplebee Tech was selected as one of the Ekiti state facilitators for this programme contributing to the success of the agenda.",
+    cover: mtt,
+  },
+  {
+    title: "Summer Coding Camp",
+    description:
+      "A summer coding camp is a 8-week program focused on introducing young people to computer science through the practice of coding and computer programming. It is designed to educate, inspire, and engage students in the coding process.",
+    cover: kidsbootcamp,
+  },
+  {
+    title: "PurpleBee Summer School",
+    description:
+      "Purplebee Summer School is a 3-day summer school designed to introduce students to the world of technology and programming. The school is designed to provide students with the necessary skills and knowledge to explore and develop their talents in the field of computer science.",
+    cover: pbfoundation,
   },
 ];
 
@@ -448,114 +366,26 @@ export const AboutPatners: ServicesProps[] = [
 
 export const Testimonies: TestimonialsProps[] = [
   {
-    name: "Adetokunbo Adebayo",
-    position: "Software Engineer",
+    name: "Gbemisola Balogun",
+    position: "UiUx Designer",
     testimonial:
-      "Purplebee Technologies transformed our software infrastructure, making our systems more efficient and scalable. Their team is knowledgeable and very supportive.",
-    companyName: "Tech Solutions Ltd",
+      " I recently had the pleasure of participating in a UI/UX training program at Purple Bee Technologies. The training was conducted by a team of industry experts who were not only knowledgeable but also passionate about the field of UI/UX.",
+    companyName: "Cohort Student",
     aboutProject:
-      "Purplebee Technologies provided a comprehensive software development solution, enhancing system efficiency and scalability.",
-    companyLocation: "Lagos, Nigeria",
-    image: testimonial1,
+      "Participated in a cohort by PurpleBee Technologies for the UI/UX design course, gaining comprehensive hands-on experience. The course emphasized industry best practices and real-world design projects.",
+    companyLocation: "Ekiti, Nigeria",
+    image: balogunTestimonial,
   },
   {
-    name: "Chioma Okeke",
-    position: "Training Manager",
+    name: "Ajayi oluwaseun",
+    position: "UiUx Designer",
     testimonial:
-      "The technical training provided by Purplebee Technologies was exceptional. Our team gained valuable skills and insights that have significantly improved our productivity.",
-    companyName: "Innovate Hub",
+      "I've always been interested in learning Tech and and when I had the opportunity to study at Purplebee technologies i took the advantage, and it’s was best decision I ever made . I really recommend you choose Purplebee technologies for the quality of the teaching combined with the relaxed and friendly atmosphere.",
+    companyName: "Cohort Student",
     aboutProject:
-      "Purplebee Technologies delivered exceptional technical training, significantly improving team skills and productivity.",
-    companyLocation: "Abuja, Nigeria",
-    image: testimonial2,
-  },
-  {
-    name: "Bola Akinyemi",
-    position: "Project Manager",
-    testimonial:
-      "Purplebee Technologies managed our project seamlessly from start to finish. Their attention to detail and proactive approach ensured that we met all our deadlines.",
-    companyName: "GreenTech Enterprises",
-    aboutProject:
-      "Purplebee Technologies provided end-to-end project management services, ensuring timely completion and attention to detail.",
-    companyLocation: "Ibadan, Nigeria",
-    image: testimonial3,
-  },
-  {
-    name: "Emeka Nwosu",
-    position: "Marketing Director",
-    testimonial:
-      "Our digital marketing campaigns have seen a significant boost thanks to Purplebee Technologies. Their innovative strategies and execution are top-notch.",
-    companyName: "MarketPro Ltd",
-    aboutProject:
-      "Purplebee Technologies executed innovative digital marketing strategies, significantly boosting campaign performance.",
-    companyLocation: "Enugu, Nigeria",
-    image: testimonial4,
-  },
-  {
-    name: "Fatima Yusuf",
-    position: "Office Manager",
-    testimonial:
-      "The workspace solutions provided by Purplebee Technologies have greatly enhanced our working environment. The space is modern, well-equipped, and conducive to productivity.",
-    companyName: "Creative Minds Co.",
-    aboutProject:
-      "Purplebee Technologies delivered modern and well-equipped workspace solutions, enhancing the working environment.",
-    companyLocation: "Kano, Nigeria",
-    image: testimonial5,
-  },
-  {
-    name: "Ifeanyi Eze",
-    position: "Consultant",
-    testimonial:
-      "The technical consultation services from Purplebee Technologies were instrumental in helping us overcome several challenges. Their expertise is unmatched.",
-    companyName: "Eze Consulting",
-    aboutProject:
-      "Purplebee Technologies provided expert technical consultation, helping to overcome key challenges with unmatched expertise.",
-    companyLocation: "Port Harcourt, Nigeria",
-    image: testimonial6,
-  },
-  {
-    name: "Kemi Balogun",
-    position: "Business Analyst",
-    testimonial:
-      "Working with Purplebee Technologies on our software development project was a fantastic experience. They delivered high-quality solutions tailored to our needs.",
-    companyName: "Bright Ideas Ltd",
-    aboutProject:
-      "Purplebee Technologies delivered high-quality, tailored software development solutions, meeting our specific needs.",
-    companyLocation: "Lagos, Nigeria",
-    image: testimonial7,
-  },
-  {
-    name: "Tunde Adeyemi",
-    position: "Training Coordinator",
-    testimonial:
-      "The training programs by Purplebee Technologies are thorough and engaging. Our employees have gained critical skills that have improved our operations.",
-    companyName: "SkillUp Nigeria",
-    aboutProject:
-      "Purplebee Technologies provided thorough and engaging training programs, significantly improving employee skills.",
-    companyLocation: "Abuja, Nigeria",
-    image: testimonial2,
-  },
-  {
-    name: "Ngozi Chukwu",
-    position: "Operations Manager",
-    testimonial:
-      "Purplebee Technologies' project management services are exceptional. They kept our project on track and ensured all our requirements were met.",
-    companyName: "Efficient Operations Inc.",
-    aboutProject:
-      "Purplebee Technologies delivered exceptional project management services, keeping the project on track and meeting all requirements.",
-    companyLocation: "Onitsha, Nigeria",
-    image: testimonial3,
-  },
-  {
-    name: "Sade Adeola",
-    position: "Digital Marketing Specialist",
-    testimonial:
-      "Our brand's online presence has grown significantly since partnering with Purplebee Technologies. Their digital marketing strategies are effective and innovative.",
-    companyName: "BrandBoost Ltd",
-    aboutProject:
-      "Purplebee Technologies implemented effective and innovative digital marketing strategies, significantly growing the brand's online presence.",
-    companyLocation: "Lagos, Nigeria",
-    image: testimonial4,
+      "Participated in a cohort by PurpleBee Technologies for the UI/UX design course, gaining comprehensive hands-on experience. The course emphasized industry best practices and real-world design projects.",
+    companyLocation: "Ekiti, Nigeria",
+    image: ajayiTestimonials,
   },
 ];
 
