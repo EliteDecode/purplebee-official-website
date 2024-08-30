@@ -14,7 +14,7 @@ const transition = {
 const TrainingHero = ({ data }: IndustriesHeroProps) => {
   return (
     <div
-      className="sm:h-[85vh] h-[70vh] w-full flex flex-col"
+      className="sm:py-28 py-16 w-full flex flex-col"
       style={{
         backgroundImage: `url(${data.background})`,
         backgroundSize: "cover",
@@ -33,7 +33,7 @@ const TrainingHero = ({ data }: IndustriesHeroProps) => {
             {data.subtitle}
           </Typography>
           <Typography
-            className="sm:text-[45px] text-[40px] my-4 text-white uppercase font-black"
+            className="sm:text-[45px] text-[30px] my-4 text-white uppercase font-black"
             style={{ lineHeight: "3rem" }}>
             {data.title}
           </Typography>

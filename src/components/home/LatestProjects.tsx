@@ -28,7 +28,7 @@ const LatestProjects = () => {
               modules={[Autoplay, Navigation]}
               pagination={{ clickable: true }}
               autoplay={{ delay: 3000 }}
-              slidesPerView={2}
+              slidesPerView={1}
               spaceBetween={30}
               loop={true}>
               {LatestEvents?.map((item, index) => (

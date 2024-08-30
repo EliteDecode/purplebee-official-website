@@ -4,6 +4,7 @@ import { Typography } from "antd";
 import { motion } from "framer-motion";
 import { IoIosPhonePortrait } from "react-icons/io";
 import { Button } from "../ui/button";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const transition = {
   type: "spring",
@@ -14,7 +15,7 @@ const transition = {
 const IndustriesHero = ({ data }: IndustriesHeroProps) => {
   return (
     <div
-      className="sm:h-[85vh] h-[70vh] w-full flex flex-col"
+      className="sm:py-28 py-16 w-full flex flex-col"
       style={{
         backgroundImage: `url(${data.background})`,
         backgroundSize: "cover",
@@ -33,7 +34,7 @@ const IndustriesHero = ({ data }: IndustriesHeroProps) => {
             {data.subtitle}
           </Typography>
           <Typography
-            className="sm:text-[45px] text-[40px] my-4 text-white uppercase font-black"
+            className="sm:text-[45px] text-[30px] my-4 text-white uppercase font-black"
             style={{ lineHeight: "3rem" }}>
             {data.title}
           </Typography>
@@ -46,9 +47,11 @@ const IndustriesHero = ({ data }: IndustriesHeroProps) => {
             {/* <Button className="bg-primary flex items-center space-x-1">
               <FiMail size={15} /> <span>Contact Us</span>
             </Button> */}
-            <Button className="bg-secondary text-dark flex items-center space-x-1">
-              <IoIosPhonePortrait size={15} /> <span>{data.cta}</span>
-            </Button>
+            <AnchorLink href="#contact">
+              <Button className="bg-secondary text-dark flex items-center space-x-1">
+                <IoIosPhonePortrait size={15} /> <span>{data.cta}</span>
+              </Button>
+            </AnchorLink>
           </Box>
         </motion.div>
       </Box>

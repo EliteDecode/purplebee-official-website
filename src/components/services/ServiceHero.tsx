@@ -5,6 +5,7 @@ import { FiMail } from "react-icons/fi";
 import { Button } from "../ui/button";
 
 import { IContent } from "@/utils/service.content";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const transition = {
   type: "spring",
@@ -15,7 +16,7 @@ const transition = {
 const ServiceHero = ({ data }: { data: IContent }) => {
   return (
     <div
-      className="sm:h-[85vh] h-[70vh] w-full flex justify-center items-start flex-col"
+      className="sm:py-28 py-16 w-full flex justify-center items-start flex-col"
       style={{
         backgroundImage: `url(${data.image})`,
         backgroundSize: "cover",
@@ -30,7 +31,7 @@ const ServiceHero = ({ data }: { data: IContent }) => {
           initial={{ y: -200, opacity: 0 }}
           animate={{ y: 30, opacity: 1 }}
           transition={transition}>
-          <Typography className="sm:text-[35px] text-[40px] my-4 leading-none text-primary font-bold">
+          <Typography className="sm:text-[45px] text-[30px] my-4 leading-none text-primary font-bold">
             {data.title}
           </Typography>
 
@@ -40,9 +41,11 @@ const ServiceHero = ({ data }: { data: IContent }) => {
             {data.description}
           </Typography>
           <Box className="flex items-center justify-center mt-5 space-x-1">
-            <Button className="bg-primary flex items-center space-x-1">
-              <FiMail size={15} /> <span>Contact Us</span>
-            </Button>
+            <AnchorLink href="#contact">
+              <Button className="bg-primary flex items-center space-x-1">
+                <FiMail size={15} /> <span>Contact Us</span>
+              </Button>
+            </AnchorLink>
           </Box>
         </motion.div>
       </Box>

@@ -9,7 +9,7 @@ const TitleText = ({ title, description, color }: TextTitleProps) => {
   return (
     <>
       <Typography
-        className={`text-[35px] ${color ? `text-white` : ""} uppercase font-bold`}>
+        className={`sm:text-[35px] text-[27px] ${color ? `text-white` : ""} uppercase font-bold`}>
         <span className="text-[50px] font-black text-primary">
           {firstLetter}
         </span>

@@ -7,11 +7,11 @@ const Fees = ({ data }: { data: IFee[] }) => {
     <Box className="bg-tetiary mt-10 py-16">
       <Box className="custom-c p-5 relative rounded-md">
         <TitleText
-          title="Cohort Training Fees"
+          title="Cohort  Fees"
           description="We offer a range of packages tailored to different cohorts, ensuring a fit for your unique needs. Please note that all fees are non-refundable. For further details or inquiries, feel free to contact us. We’re here to help you choose the best option for your goals"
         />
         <div className="flex items-center justify-center ">
-          <div className="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16">
+          <div className="mx-auto max-w-screen-xl px-0 py-8 lg:px-6 lg:py-16">
             <div className="space-y-8 lg:grid md:grid-cols-3 lg:space-y-0 lg:gap-10">
               {data.map((item, index) => (
                 <div
