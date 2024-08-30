@@ -22,7 +22,7 @@ const Technology = () => {
         />
 
         {/* Tab Section */}
-        <Box display="flex" className="mt-5 ">
+        <Box className="mt-5 flex flex-wrap gap-4 ">
           {technologySet.map((category, index) => (
             <Box
               key={category.category}
@@ -47,8 +47,33 @@ const Technology = () => {
             modules={[Autoplay, Navigation]}
             pagination={{ clickable: true }}
             autoplay={{ delay: 3000 }}
-            slidesPerView={5}
-            spaceBetween={30}
+            breakpoints={{
+              // when window width is >= 0px (applies to all screen sizes)
+              0: {
+                slidesPerView: 3, // Display 1 slide at a time
+                spaceBetween: 10, // Smaller spacing between slides
+              },
+              // when window width is >= 640px
+              640: {
+                slidesPerView: 3, // Display 2 slides at a time
+                spaceBetween: 20, // Medium spacing between slides
+              },
+              // when window width is >= 768px
+              768: {
+                slidesPerView: 5, // Display 3 slides at a time
+                spaceBetween: 30, // Larger spacing between slides
+              },
+              // when window width is >= 1024px
+              1024: {
+                slidesPerView: 5, // Display 4 slides at a time
+                spaceBetween: 40, // Maximum spacing between slides
+              },
+              // when window width is >= 1280px
+              1280: {
+                slidesPerView: 5, // Display 5 slides at a time
+                spaceBetween: 50, // Additional spacing for larger screens
+              },
+            }}
             loop={true}>
             {technologySet[selectedTab]?.tools?.map((tool, index) => {
               const IconComponent = iconMap[tool.icon];

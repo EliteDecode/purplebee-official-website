@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 import { IoIosPhonePortrait } from "react-icons/io";
 import { FiMail } from "react-icons/fi";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const transition = {
   type: "spring",
@@ -13,7 +14,7 @@ const transition = {
 
 const Hero = () => {
   return (
-    <div className="sm:h-[100vh] h-[80vh] w-full flex flex-col items-center justify-center hero_bg">
+    <div className="sm:py-48 py-32 w-full flex flex-col items-center justify-center hero_bg">
       <Box className="w-[85%] text-center m-auto ">
         <motion.div
           className="mt-20"
@@ -32,12 +33,16 @@ const Hero = () => {
             A Hub for Innovation, Creativity, and Excellence
           </Typography>
           <Box className="flex items-center mt-5 justify-center space-x-1">
-            <Button className="bg-primary flex items-center space-x-1">
-              <FiMail size={15} /> <span>Contact Us</span>
-            </Button>
-            <Button className="bg-secondary hover:bg-green-500 text-dark flex items-center space-x-1">
-              <IoIosPhonePortrait size={15} /> <span>Get a Quote</span>
-            </Button>
+            <AnchorLink href="#contact">
+              <Button className="bg-primary flex items-center space-x-1">
+                <FiMail size={15} /> <span>Contact Us</span>
+              </Button>
+            </AnchorLink>
+            <AnchorLink href="#contact">
+              <Button className="bg-secondary hover:bg-green-500 text-dark flex items-center space-x-1">
+                <IoIosPhonePortrait size={15} /> <span>Get a Quote</span>
+              </Button>
+            </AnchorLink>
           </Box>
         </motion.div>
       </Box>
