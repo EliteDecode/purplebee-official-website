@@ -1,11 +1,10 @@
-import { NavbarLinks, projects } from "@/utils/general.content.";
+import { NavbarLinks } from "@/utils/general.content.";
 import { Box } from "@mui/material";
 import { Typography } from "antd";
 import {
   FaFacebookSquare,
   FaInstagramSquare,
   FaLinkedin,
-  FaTwitterSquare,
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -13,7 +12,7 @@ const Footer = () => {
     <Box className="bg-dark">
       <Box className="custom-c py-8">
         <Box className="grid sm:grid-cols-5 grid-cols-3 gap-2 border-b border-[#80808052] py-12">
-          {[...NavbarLinks.slice(0, 4), ...projects]?.map((item, index) => (
+          {NavbarLinks?.map((item, index) => (
             <Box key={index}>
               <Typography
                 className="text-white font-bold text-[20px]"
@@ -22,11 +21,14 @@ const Footer = () => {
               </Typography>
               <Box className="space-y-2 mt-3">
                 {item?.links?.map((link, index) => (
-                  <Typography
-                    className="text-gray-300 hover:text-secondary cursor-pointer text-[14px]"
-                    key={index}>
-                    {link?.title}
-                  </Typography>
+                  <a href={link?.path}>
+                    <Typography
+                      className="text-gray-300 hover:text-secondary cursor-pointer text-[14px]"
+                      key={index}
+                      style={{ marginTop: 15 }}>
+                      {link?.title}
+                    </Typography>
+                  </a>
                 ))}
               </Box>
             </Box>
@@ -79,10 +81,17 @@ const Footer = () => {
               Social Accounts
             </Typography>
             <Box className="flex items-center sm:justify-center justify-start space-x-2">
-              <FaFacebookSquare className="text-gray-300 text-[20px] cursor-pointer" />
-              <FaInstagramSquare className="text-gray-300 text-[20px] cursor-pointer" />
-              <FaTwitterSquare className="text-gray-300 text-[20px] cursor-pointer" />
-              <FaLinkedin className="text-gray-300 text-[20px] cursor-pointer" />
+              <a href="https://www.facebook.com/purplebeetech">
+                <FaFacebookSquare className="text-gray-300 text-[20px] cursor-pointer" />
+              </a>
+              <a href="https://www.instagram.com/purplebeetech/">
+                <FaInstagramSquare className="text-gray-300 text-[20px] cursor-pointer" />
+              </a>
+
+              <a href="https://www.linkedin.com/company/purple-bee-technology/posts/?feedView=all">
+                {" "}
+                <FaLinkedin className="text-gray-300 text-[20px] cursor-pointer" />
+              </a>
             </Box>
           </Box>
         </Box>

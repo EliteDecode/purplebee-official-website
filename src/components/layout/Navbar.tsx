@@ -90,10 +90,6 @@ const Navbar = () => {
                                         ))}
                                       </ul>
                                     </Box>
-
-                                    <Typography className="underline text-[10px] text-gray-700 mt-3">
-                                      All Technologies
-                                    </Typography>
                                   </Grid>
                                 </Grid>
                               </Box>

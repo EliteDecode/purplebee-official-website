@@ -13,6 +13,7 @@ import companyImage from "@/assets/images/navbar/navbar_company.jpg";
 import industriesImage from "@/assets/images/navbar/navbar_industries.jpg";
 import servicesImage from "@/assets/images/navbar/navbar_services.jpg";
 import trainingImage from "@/assets/images/navbar/navbar_training.jpg";
+import projectsImage from "@/assets/images/navbar/navbar_projects.jpg";
 
 //Services Icons
 import consultationImage from "@/assets/images/services/consultion.png";
@@ -32,6 +33,8 @@ import pbresultImage from "@/assets/images/patners/pbresult.png";
 //Testimonial Images
 import ajayiTestimonials from "@/assets/images/testimonials/ajayi.jpg";
 import balogunTestimonial from "@/assets/images/testimonials/balogun.jpg";
+import dapo from "@/assets/images/testimonials/Dr-Dapo.jpg";
+import eimpact from "@/assets/images/patners/grace4Impact.png";
 
 //Latest Events
 import mtt from "@/assets/images/events/3mtt.jpg";
@@ -204,39 +207,84 @@ export const NavbarLinks: NavbarLinksProps[] = [
       },
     ],
   },
+  {
+    title: "Projects",
+    width: "w-[900px]",
+    image: projectsImage,
+    description:
+      "Over time weve completed many projects for our clients, and we are proud of our achievements.",
+    links: [
+      {
+        title: "Pbresult Software",
+        path: "https://ekiti.pbresultvault.com/",
+      },
+      {
+        title: "Eimpact Health Tracking Software",
+        path: "https://eimpactchart.com/#/auth/sign-in/default",
+      },
+      {
+        title: "Ekiti State Exams",
+        path: "https://school.eksexams.com/",
+      },
+      {
+        title: "Tinyteeth Official Website",
+        path: "https://thetinyteeth.com/",
+      },
+      {
+        title: "Hillside University Website",
+        path: "https://hust.edu.ng",
+      },
+      {
+        title: "Hillside University Staff Portal",
+        path: "https://staff.hust.edu.ng",
+      },
+      {
+        title: "Fam Craft Web Platform",
+        path: "https://famcraft.ng",
+      },
+      {
+        title: "Spring of Life School Portal",
+        path: "https://springlife.purplebeetech.com ",
+      },
+    ],
+  },
 ];
 
 export const projects = [
   {
     title: "Projects",
-    width: "w-[800px]",
+    width: "w-[900px]",
     image: servicesImage,
     description:
-      " Lorem ipsum dolor sit amet consectetur adipisicing  elit. Totam, commodi?",
+      "We provide training in various technologies and tools for our clients.",
     links: [
       {
         title: "Pbresult Software",
-        path: "/pbresult-software",
+        path: "https://ekiti.pbresultvault.com/",
       },
       {
-        title: "Pbresult Vault",
-        path: "/pbresult-vault",
+        title: "Eimpact Health Tracking Software",
+        path: "https://eimpactchart.com/#/auth/sign-in/default",
       },
       {
         title: "Ekiti State Exams",
-        path: "/ekiti-state-exams",
+        path: "https://school.eksexams.com/",
       },
       {
         title: "Tinyteeth Official Website",
-        path: "/tinyteeth-official-website",
+        path: "https://thetinyteeth.com/",
       },
       {
         title: "Hillside University Website",
-        path: "/hillside-university-website",
+        path: "https://hust.edu.ng",
       },
       {
-        title: "Hillside University Mobile App",
-        path: "/hillside-university-mobile-app",
+        title: "Fam Craft Web Platform",
+        path: "https://famcraft.ng",
+      },
+      {
+        title: "Spring of Life School Portal",
+        path: "https://springlife.purplebeetech.com ",
       },
     ],
   },
@@ -386,6 +434,29 @@ export const Testimonies: TestimonialsProps[] = [
       "Participated in a cohort by PurpleBee Technologies for the UI/UX design course, gaining comprehensive hands-on experience. The course emphasized industry best practices and real-world design projects.",
     companyLocation: "Ekiti, Nigeria",
     image: ajayiTestimonials,
+  },
+  {
+    name: "Dr. Tinu Oriola",
+    position: "Pediatric Dentist",
+    testimonial:
+      "PurpleBee Technologies transformed our vision into a reality with an incredible pediatric dentistry website. Their attention to detail, understanding of our needs, and seamless design exceeded our expectations. ",
+    companyName: "Pediatric Dentistry",
+    aboutProject:
+      "PurpleBee Technologies was tasked with designing and developing a comprehensive website for Pediatric Dentistry, a leading pediatric dental practice.  ",
+    companyLocation:
+      "1881 Connercenter East Drive, Suite 134 San Bernardino, CA 92408",
+    image: dapo,
+  },
+  {
+    name: "Mr Obed",
+    position: "Business Developer",
+    testimonial:
+      "The Eimpact Chart Health Software developed by PurpleBee Technologies has been a game-changer for our outreach programs. The software allows us to efficiently track and manage healthcare data during our medical outreaches, ensuring that every patient receives the attention they need. ",
+    companyName: "Eimpact Chart Health Software",
+    aboutProject:
+      "PurpleBee Technologies collaborated with the Grace for Impact Foundation to develop the Eimpact Chart Health Software, a powerful tool designed to streamline the tracking and management of healthcare details during outreach programs.",
+    companyLocation: "Lagos, Nigeria",
+    image: eimpact,
   },
 ];
 
