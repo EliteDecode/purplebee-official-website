@@ -7,6 +7,20 @@ import toast from "react-hot-toast";
 const useContactForm = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
+  const formik = useFormik({
+    initialValues: {
+      fullName: "",
+      email: "",
+      phone: "",
+      service: "",
+      message: "",
+    },
+    validationSchema: contactFormSchema,
+    onSubmit: (values) => {
+      sendMail(values);
+    },
+  });
+
   const sendMail = async (values: {
     fullName: string;
     email: string;
@@ -24,26 +38,13 @@ const useContactForm = () => {
       if (response.data) {
         toast.success("Message sent successfully");
         setIsLoading(false);
+        formik.resetForm();
       }
     } catch (error) {
       toast.error("Failed to send message");
       setIsLoading(false);
     }
   };
-
-  const formik = useFormik({
-    initialValues: {
-      fullName: "",
-      email: "",
-      phone: "",
-      service: "",
-      message: "",
-    },
-    validationSchema: contactFormSchema,
-    onSubmit: (values) => {
-      sendMail(values);
-    },
-  });
 
   return { isLoading, formik };
 };
