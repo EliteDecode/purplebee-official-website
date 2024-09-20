@@ -46,6 +46,11 @@ export const BasicComputerKnowledge = lazy(
   () => import("../pages/Training/BasicComputerKnowledge")
 );
 
+//Certificates
+export const Certificates = lazy(
+  () => import("../pages/Students/Certificates")
+);
+
 //Error Boundary
 export const ErrorPage = import("../pages/Error/Error");
 export const ErrorBoundary = import("../pages/Error/ErrorBoundary");

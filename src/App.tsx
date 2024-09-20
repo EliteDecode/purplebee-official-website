@@ -25,6 +25,7 @@ import {
   UIUX,
   Animation,
   BasicComputerKnowledge,
+  Certificates,
 } from "./routes";
 import { Layout } from "./components/layout";
 
@@ -174,6 +175,17 @@ export default function App() {
                 {
                   path: "basic-computer-knowledge",
                   element: <BasicComputerKnowledge />,
+                },
+              ],
+            },
+
+            // Student Certificates
+            {
+              path: "/student",
+              children: [
+                {
+                  path: "/student/:studentId",
+                  element: <Certificates />,
                 },
               ],
             },
